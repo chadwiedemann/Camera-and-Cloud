@@ -1,0 +1,548 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		635B32405D4827038C3C726D /* libPods-Camera and Cloud.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 778AFA333047D5454F56EFC7 /* libPods-Camera and Cloud.a */; };
+		D8FEA9E91D9AF3E1003A1371 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FEA9E81D9AF3E1003A1371 /* main.m */; };
+		D8FEA9EC1D9AF3E1003A1371 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FEA9EB1D9AF3E1003A1371 /* AppDelegate.m */; };
+		D8FEA9EF1D9AF3E1003A1371 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FEA9EE1D9AF3E1003A1371 /* FirstViewController.m */; };
+		D8FEA9F21D9AF3E1003A1371 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FEA9F11D9AF3E1003A1371 /* SecondViewController.m */; };
+		D8FEA9F51D9AF3E1003A1371 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8FEA9F31D9AF3E1003A1371 /* Main.storyboard */; };
+		D8FEA9F71D9AF3E1003A1371 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8FEA9F61D9AF3E1003A1371 /* Assets.xcassets */; };
+		D8FEA9FA1D9AF3E1003A1371 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8FEA9F81D9AF3E1003A1371 /* LaunchScreen.storyboard */; };
+		D8FEAA021D9AF636003A1371 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA011D9AF636003A1371 /* GoogleService-Info.plist */; };
+		D8FEAA141D9B0811003A1371 /* btn_uploadphoto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA031D9B0811003A1371 /* btn_uploadphoto@2x.png */; };
+		D8FEAA151D9B0811003A1371 /* photo_01@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA041D9B0811003A1371 /* photo_01@2x.jpg */; };
+		D8FEAA161D9B0811003A1371 /* photo_02@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA051D9B0811003A1371 /* photo_02@2x.jpg */; };
+		D8FEAA171D9B0811003A1371 /* photo_03@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA061D9B0811003A1371 /* photo_03@2x.jpg */; };
+		D8FEAA181D9B0811003A1371 /* photo_04@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA071D9B0811003A1371 /* photo_04@2x.jpg */; };
+		D8FEAA191D9B0811003A1371 /* photo_05@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA081D9B0811003A1371 /* photo_05@2x.jpg */; };
+		D8FEAA1A1D9B0811003A1371 /* photo_06@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA091D9B0811003A1371 /* photo_06@2x.jpg */; };
+		D8FEAA1B1D9B0811003A1371 /* photo_07@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA0A1D9B0811003A1371 /* photo_07@2x.jpg */; };
+		D8FEAA1C1D9B0811003A1371 /* photo_08@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA0B1D9B0811003A1371 /* photo_08@2x.jpg */; };
+		D8FEAA1D1D9B0811003A1371 /* photo_09@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA0C1D9B0811003A1371 /* photo_09@2x.jpg */; };
+		D8FEAA1E1D9B0811003A1371 /* photo_10@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA0D1D9B0811003A1371 /* photo_10@2x.jpg */; };
+		D8FEAA1F1D9B0811003A1371 /* photo_11@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA0E1D9B0811003A1371 /* photo_11@2x.jpg */; };
+		D8FEAA201D9B0811003A1371 /* photo_12@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA0F1D9B0811003A1371 /* photo_12@2x.jpg */; };
+		D8FEAA211D9B0811003A1371 /* photo_13@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA101D9B0811003A1371 /* photo_13@2x.jpg */; };
+		D8FEAA221D9B0811003A1371 /* photo_14@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA111D9B0811003A1371 /* photo_14@2x.jpg */; };
+		D8FEAA231D9B0811003A1371 /* photo_15@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA121D9B0811003A1371 /* photo_15@2x.jpg */; };
+		D8FEAA241D9B0811003A1371 /* photo_16@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA131D9B0811003A1371 /* photo_16@2x.jpg */; };
+		D8FEAA361D9B082B003A1371 /* btn_uploadphoto@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA251D9B082A003A1371 /* btn_uploadphoto@3x.png */; };
+		D8FEAA371D9B082B003A1371 /* photo_01@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA261D9B082A003A1371 /* photo_01@3x.jpg */; };
+		D8FEAA381D9B082B003A1371 /* photo_02@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA271D9B082A003A1371 /* photo_02@3x.jpg */; };
+		D8FEAA391D9B082B003A1371 /* photo_03@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA281D9B082A003A1371 /* photo_03@3x.jpg */; };
+		D8FEAA3A1D9B082B003A1371 /* photo_04@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA291D9B082A003A1371 /* photo_04@3x.jpg */; };
+		D8FEAA3B1D9B082B003A1371 /* photo_05@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA2A1D9B082A003A1371 /* photo_05@3x.jpg */; };
+		D8FEAA3C1D9B082B003A1371 /* photo_06@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA2B1D9B082A003A1371 /* photo_06@3x.jpg */; };
+		D8FEAA3D1D9B082B003A1371 /* photo_07@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA2C1D9B082A003A1371 /* photo_07@3x.jpg */; };
+		D8FEAA3E1D9B082B003A1371 /* photo_08@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA2D1D9B082A003A1371 /* photo_08@3x.jpg */; };
+		D8FEAA3F1D9B082B003A1371 /* photo_09@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA2E1D9B082A003A1371 /* photo_09@3x.jpg */; };
+		D8FEAA401D9B082B003A1371 /* photo_10@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA2F1D9B082A003A1371 /* photo_10@3x.jpg */; };
+		D8FEAA411D9B082B003A1371 /* photo_11@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA301D9B082A003A1371 /* photo_11@3x.jpg */; };
+		D8FEAA421D9B082B003A1371 /* photo_12@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA311D9B082B003A1371 /* photo_12@3x.jpg */; };
+		D8FEAA431D9B082B003A1371 /* photo_13@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA321D9B082B003A1371 /* photo_13@3x.jpg */; };
+		D8FEAA441D9B082B003A1371 /* photo_14@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA331D9B082B003A1371 /* photo_14@3x.jpg */; };
+		D8FEAA451D9B082B003A1371 /* photo_15@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA341D9B082B003A1371 /* photo_15@3x.jpg */; };
+		D8FEAA461D9B082B003A1371 /* photo_16@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA351D9B082B003A1371 /* photo_16@3x.jpg */; };
+		D8FEAA481D9B083D003A1371 /* icn_comment.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA471D9B083D003A1371 /* icn_comment.pdf */; };
+		D8FEAA4A1D9B0884003A1371 /* btn_uploadphoto.png in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA491D9B0884003A1371 /* btn_uploadphoto.png */; };
+		D8FEAA4D1D9B08A4003A1371 /*  active.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA4B1D9B08A4003A1371 /*  active.pdf */; };
+		D8FEAA4E1D9B08A4003A1371 /*  inactive.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D8FEAA4C1D9B08A4003A1371 /*  inactive.pdf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		095BA2F7224F04C100944742 /* Pods-Camera and Cloud.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camera and Cloud.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Camera and Cloud/Pods-Camera and Cloud.debug.xcconfig"; sourceTree = "<group>"; };
+		34CCF0557BDD67F489C9A5B0 /* Pods-Camera and Cloud.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camera and Cloud.release.xcconfig"; path = "Pods/Target Support Files/Pods-Camera and Cloud/Pods-Camera and Cloud.release.xcconfig"; sourceTree = "<group>"; };
+		778AFA333047D5454F56EFC7 /* libPods-Camera and Cloud.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Camera and Cloud.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8FEA9E41D9AF3E1003A1371 /* Camera and Cloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Camera and Cloud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8FEA9E81D9AF3E1003A1371 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D8FEA9EA1D9AF3E1003A1371 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D8FEA9EB1D9AF3E1003A1371 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D8FEA9ED1D9AF3E1003A1371 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		D8FEA9EE1D9AF3E1003A1371 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		D8FEA9F01D9AF3E1003A1371 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		D8FEA9F11D9AF3E1003A1371 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		D8FEA9F41D9AF3E1003A1371 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D8FEA9F61D9AF3E1003A1371 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D8FEA9F91D9AF3E1003A1371 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D8FEA9FB1D9AF3E1003A1371 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8FEAA011D9AF636003A1371 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D8FEAA031D9B0811003A1371 /* btn_uploadphoto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_uploadphoto@2x.png"; sourceTree = "<group>"; };
+		D8FEAA041D9B0811003A1371 /* photo_01@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_01@2x.jpg"; sourceTree = "<group>"; };
+		D8FEAA051D9B0811003A1371 /* photo_02@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_02@2x.jpg"; sourceTree = "<group>"; };
+		D8FEAA061D9B0811003A1371 /* photo_03@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_03@2x.jpg"; sourceTree = "<group>"; };
+		D8FEAA071D9B0811003A1371 /* photo_04@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_04@2x.jpg"; sourceTree = "<group>"; };
+		D8FEAA081D9B0811003A1371 /* photo_05@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_05@2x.jpg"; sourceTree = "<group>"; };
+		D8FEAA091D9B0811003A1371 /* photo_06@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_06@2x.jpg"; sourceTree = "<group>"; };
+		D8FEAA0A1D9B0811003A1371 /* photo_07@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_07@2x.jpg"; sourceTree = "<group>"; };
+		D8FEAA0B1D9B0811003A1371 /* photo_08@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_08@2x.jpg"; sourceTree = "<group>"; };
+		D8FEAA0C1D9B0811003A1371 /* photo_09@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_09@2x.jpg"; sourceTree = "<group>"; };
+		D8FEAA0D1D9B0811003A1371 /* photo_10@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_10@2x.jpg"; sourceTree = "<group>"; };
+		D8FEAA0E1D9B0811003A1371 /* photo_11@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_11@2x.jpg"; sourceTree = "<group>"; };
+		D8FEAA0F1D9B0811003A1371 /* photo_12@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_12@2x.jpg"; sourceTree = "<group>"; };
+		D8FEAA101D9B0811003A1371 /* photo_13@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_13@2x.jpg"; sourceTree = "<group>"; };
+		D8FEAA111D9B0811003A1371 /* photo_14@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_14@2x.jpg"; sourceTree = "<group>"; };
+		D8FEAA121D9B0811003A1371 /* photo_15@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_15@2x.jpg"; sourceTree = "<group>"; };
+		D8FEAA131D9B0811003A1371 /* photo_16@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_16@2x.jpg"; sourceTree = "<group>"; };
+		D8FEAA251D9B082A003A1371 /* btn_uploadphoto@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_uploadphoto@3x.png"; sourceTree = "<group>"; };
+		D8FEAA261D9B082A003A1371 /* photo_01@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_01@3x.jpg"; sourceTree = "<group>"; };
+		D8FEAA271D9B082A003A1371 /* photo_02@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_02@3x.jpg"; sourceTree = "<group>"; };
+		D8FEAA281D9B082A003A1371 /* photo_03@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_03@3x.jpg"; sourceTree = "<group>"; };
+		D8FEAA291D9B082A003A1371 /* photo_04@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_04@3x.jpg"; sourceTree = "<group>"; };
+		D8FEAA2A1D9B082A003A1371 /* photo_05@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_05@3x.jpg"; sourceTree = "<group>"; };
+		D8FEAA2B1D9B082A003A1371 /* photo_06@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_06@3x.jpg"; sourceTree = "<group>"; };
+		D8FEAA2C1D9B082A003A1371 /* photo_07@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_07@3x.jpg"; sourceTree = "<group>"; };
+		D8FEAA2D1D9B082A003A1371 /* photo_08@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_08@3x.jpg"; sourceTree = "<group>"; };
+		D8FEAA2E1D9B082A003A1371 /* photo_09@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_09@3x.jpg"; sourceTree = "<group>"; };
+		D8FEAA2F1D9B082A003A1371 /* photo_10@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_10@3x.jpg"; sourceTree = "<group>"; };
+		D8FEAA301D9B082A003A1371 /* photo_11@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_11@3x.jpg"; sourceTree = "<group>"; };
+		D8FEAA311D9B082B003A1371 /* photo_12@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_12@3x.jpg"; sourceTree = "<group>"; };
+		D8FEAA321D9B082B003A1371 /* photo_13@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_13@3x.jpg"; sourceTree = "<group>"; };
+		D8FEAA331D9B082B003A1371 /* photo_14@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_14@3x.jpg"; sourceTree = "<group>"; };
+		D8FEAA341D9B082B003A1371 /* photo_15@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_15@3x.jpg"; sourceTree = "<group>"; };
+		D8FEAA351D9B082B003A1371 /* photo_16@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_16@3x.jpg"; sourceTree = "<group>"; };
+		D8FEAA471D9B083D003A1371 /* icn_comment.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = icn_comment.pdf; sourceTree = "<group>"; };
+		D8FEAA491D9B0884003A1371 /* btn_uploadphoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_uploadphoto.png; sourceTree = "<group>"; };
+		D8FEAA4B1D9B08A4003A1371 /*  active.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = " active.pdf"; sourceTree = "<group>"; };
+		D8FEAA4C1D9B08A4003A1371 /*  inactive.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = " inactive.pdf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D8FEA9E11D9AF3E1003A1371 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				635B32405D4827038C3C726D /* libPods-Camera and Cloud.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B3E8A34DE02E346770EF03B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				095BA2F7224F04C100944742 /* Pods-Camera and Cloud.debug.xcconfig */,
+				34CCF0557BDD67F489C9A5B0 /* Pods-Camera and Cloud.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		901EC43802BAA0E680C74E09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				778AFA333047D5454F56EFC7 /* libPods-Camera and Cloud.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8FEA9DB1D9AF3E1003A1371 = {
+			isa = PBXGroup;
+			children = (
+				D8FEA9E61D9AF3E1003A1371 /* Camera and Cloud */,
+				D8FEA9E51D9AF3E1003A1371 /* Products */,
+				5B3E8A34DE02E346770EF03B /* Pods */,
+				901EC43802BAA0E680C74E09 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D8FEA9E51D9AF3E1003A1371 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8FEA9E41D9AF3E1003A1371 /* Camera and Cloud.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8FEA9E61D9AF3E1003A1371 /* Camera and Cloud */ = {
+			isa = PBXGroup;
+			children = (
+				D8FEA9EA1D9AF3E1003A1371 /* AppDelegate.h */,
+				D8FEA9EB1D9AF3E1003A1371 /* AppDelegate.m */,
+				D8FEA9ED1D9AF3E1003A1371 /* FirstViewController.h */,
+				D8FEA9EE1D9AF3E1003A1371 /* FirstViewController.m */,
+				D8FEA9F01D9AF3E1003A1371 /* SecondViewController.h */,
+				D8FEA9F11D9AF3E1003A1371 /* SecondViewController.m */,
+				D8FEA9F31D9AF3E1003A1371 /* Main.storyboard */,
+				D8FEA9F61D9AF3E1003A1371 /* Assets.xcassets */,
+				D8FEA9F81D9AF3E1003A1371 /* LaunchScreen.storyboard */,
+				D8FEA9FB1D9AF3E1003A1371 /* Info.plist */,
+				D8FEAA011D9AF636003A1371 /* GoogleService-Info.plist */,
+				D8FEA9E71D9AF3E1003A1371 /* Supporting Files */,
+			);
+			path = "Camera and Cloud";
+			sourceTree = "<group>";
+		};
+		D8FEA9E71D9AF3E1003A1371 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D8FEAA4B1D9B08A4003A1371 /*  active.pdf */,
+				D8FEAA4C1D9B08A4003A1371 /*  inactive.pdf */,
+				D8FEAA491D9B0884003A1371 /* btn_uploadphoto.png */,
+				D8FEAA471D9B083D003A1371 /* icn_comment.pdf */,
+				D8FEAA251D9B082A003A1371 /* btn_uploadphoto@3x.png */,
+				D8FEAA261D9B082A003A1371 /* photo_01@3x.jpg */,
+				D8FEAA271D9B082A003A1371 /* photo_02@3x.jpg */,
+				D8FEAA281D9B082A003A1371 /* photo_03@3x.jpg */,
+				D8FEAA291D9B082A003A1371 /* photo_04@3x.jpg */,
+				D8FEAA2A1D9B082A003A1371 /* photo_05@3x.jpg */,
+				D8FEAA2B1D9B082A003A1371 /* photo_06@3x.jpg */,
+				D8FEAA2C1D9B082A003A1371 /* photo_07@3x.jpg */,
+				D8FEAA2D1D9B082A003A1371 /* photo_08@3x.jpg */,
+				D8FEAA2E1D9B082A003A1371 /* photo_09@3x.jpg */,
+				D8FEAA2F1D9B082A003A1371 /* photo_10@3x.jpg */,
+				D8FEAA301D9B082A003A1371 /* photo_11@3x.jpg */,
+				D8FEAA311D9B082B003A1371 /* photo_12@3x.jpg */,
+				D8FEAA321D9B082B003A1371 /* photo_13@3x.jpg */,
+				D8FEAA331D9B082B003A1371 /* photo_14@3x.jpg */,
+				D8FEAA341D9B082B003A1371 /* photo_15@3x.jpg */,
+				D8FEAA351D9B082B003A1371 /* photo_16@3x.jpg */,
+				D8FEAA031D9B0811003A1371 /* btn_uploadphoto@2x.png */,
+				D8FEAA041D9B0811003A1371 /* photo_01@2x.jpg */,
+				D8FEAA051D9B0811003A1371 /* photo_02@2x.jpg */,
+				D8FEAA061D9B0811003A1371 /* photo_03@2x.jpg */,
+				D8FEAA071D9B0811003A1371 /* photo_04@2x.jpg */,
+				D8FEAA081D9B0811003A1371 /* photo_05@2x.jpg */,
+				D8FEAA091D9B0811003A1371 /* photo_06@2x.jpg */,
+				D8FEAA0A1D9B0811003A1371 /* photo_07@2x.jpg */,
+				D8FEAA0B1D9B0811003A1371 /* photo_08@2x.jpg */,
+				D8FEAA0C1D9B0811003A1371 /* photo_09@2x.jpg */,
+				D8FEAA0D1D9B0811003A1371 /* photo_10@2x.jpg */,
+				D8FEAA0E1D9B0811003A1371 /* photo_11@2x.jpg */,
+				D8FEAA0F1D9B0811003A1371 /* photo_12@2x.jpg */,
+				D8FEAA101D9B0811003A1371 /* photo_13@2x.jpg */,
+				D8FEAA111D9B0811003A1371 /* photo_14@2x.jpg */,
+				D8FEAA121D9B0811003A1371 /* photo_15@2x.jpg */,
+				D8FEAA131D9B0811003A1371 /* photo_16@2x.jpg */,
+				D8FEA9E81D9AF3E1003A1371 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D8FEA9E31D9AF3E1003A1371 /* Camera and Cloud */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8FEA9FE1D9AF3E1003A1371 /* Build configuration list for PBXNativeTarget "Camera and Cloud" */;
+			buildPhases = (
+				806A646897342F76B1F1A6BC /* [CP] Check Pods Manifest.lock */,
+				D8FEA9E01D9AF3E1003A1371 /* Sources */,
+				D8FEA9E11D9AF3E1003A1371 /* Frameworks */,
+				D8FEA9E21D9AF3E1003A1371 /* Resources */,
+				292D548C2A66F097C2EAAACC /* [CP] Embed Pods Frameworks */,
+				56DF5864B981CD8815C0D38C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Camera and Cloud";
+			productName = "Camera and Cloud";
+			productReference = D8FEA9E41D9AF3E1003A1371 /* Camera and Cloud.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D8FEA9DC1D9AF3E1003A1371 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Chad Wiedemann";
+				TargetAttributes = {
+					D8FEA9E31D9AF3E1003A1371 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = P44YFW78FY;
+					};
+				};
+			};
+			buildConfigurationList = D8FEA9DF1D9AF3E1003A1371 /* Build configuration list for PBXProject "Camera and Cloud" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D8FEA9DB1D9AF3E1003A1371;
+			productRefGroup = D8FEA9E51D9AF3E1003A1371 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8FEA9E31D9AF3E1003A1371 /* Camera and Cloud */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D8FEA9E21D9AF3E1003A1371 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8FEAA1B1D9B0811003A1371 /* photo_07@2x.jpg in Resources */,
+				D8FEAA421D9B082B003A1371 /* photo_12@3x.jpg in Resources */,
+				D8FEAA4E1D9B08A4003A1371 /*  inactive.pdf in Resources */,
+				D8FEAA241D9B0811003A1371 /* photo_16@2x.jpg in Resources */,
+				D8FEAA151D9B0811003A1371 /* photo_01@2x.jpg in Resources */,
+				D8FEA9FA1D9AF3E1003A1371 /* LaunchScreen.storyboard in Resources */,
+				D8FEAA3C1D9B082B003A1371 /* photo_06@3x.jpg in Resources */,
+				D8FEAA381D9B082B003A1371 /* photo_02@3x.jpg in Resources */,
+				D8FEAA431D9B082B003A1371 /* photo_13@3x.jpg in Resources */,
+				D8FEAA1F1D9B0811003A1371 /* photo_11@2x.jpg in Resources */,
+				D8FEAA201D9B0811003A1371 /* photo_12@2x.jpg in Resources */,
+				D8FEAA021D9AF636003A1371 /* GoogleService-Info.plist in Resources */,
+				D8FEAA141D9B0811003A1371 /* btn_uploadphoto@2x.png in Resources */,
+				D8FEAA3E1D9B082B003A1371 /* photo_08@3x.jpg in Resources */,
+				D8FEAA371D9B082B003A1371 /* photo_01@3x.jpg in Resources */,
+				D8FEAA171D9B0811003A1371 /* photo_03@2x.jpg in Resources */,
+				D8FEAA1A1D9B0811003A1371 /* photo_06@2x.jpg in Resources */,
+				D8FEAA411D9B082B003A1371 /* photo_11@3x.jpg in Resources */,
+				D8FEA9F71D9AF3E1003A1371 /* Assets.xcassets in Resources */,
+				D8FEAA181D9B0811003A1371 /* photo_04@2x.jpg in Resources */,
+				D8FEAA1C1D9B0811003A1371 /* photo_08@2x.jpg in Resources */,
+				D8FEAA1E1D9B0811003A1371 /* photo_10@2x.jpg in Resources */,
+				D8FEAA211D9B0811003A1371 /* photo_13@2x.jpg in Resources */,
+				D8FEAA451D9B082B003A1371 /* photo_15@3x.jpg in Resources */,
+				D8FEAA4D1D9B08A4003A1371 /*  active.pdf in Resources */,
+				D8FEAA401D9B082B003A1371 /* photo_10@3x.jpg in Resources */,
+				D8FEAA161D9B0811003A1371 /* photo_02@2x.jpg in Resources */,
+				D8FEAA231D9B0811003A1371 /* photo_15@2x.jpg in Resources */,
+				D8FEAA3B1D9B082B003A1371 /* photo_05@3x.jpg in Resources */,
+				D8FEAA461D9B082B003A1371 /* photo_16@3x.jpg in Resources */,
+				D8FEAA3D1D9B082B003A1371 /* photo_07@3x.jpg in Resources */,
+				D8FEAA191D9B0811003A1371 /* photo_05@2x.jpg in Resources */,
+				D8FEAA481D9B083D003A1371 /* icn_comment.pdf in Resources */,
+				D8FEAA391D9B082B003A1371 /* photo_03@3x.jpg in Resources */,
+				D8FEAA4A1D9B0884003A1371 /* btn_uploadphoto.png in Resources */,
+				D8FEAA361D9B082B003A1371 /* btn_uploadphoto@3x.png in Resources */,
+				D8FEAA3A1D9B082B003A1371 /* photo_04@3x.jpg in Resources */,
+				D8FEAA1D1D9B0811003A1371 /* photo_09@2x.jpg in Resources */,
+				D8FEA9F51D9AF3E1003A1371 /* Main.storyboard in Resources */,
+				D8FEAA3F1D9B082B003A1371 /* photo_09@3x.jpg in Resources */,
+				D8FEAA221D9B0811003A1371 /* photo_14@2x.jpg in Resources */,
+				D8FEAA441D9B082B003A1371 /* photo_14@3x.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		292D548C2A66F097C2EAAACC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Camera and Cloud/Pods-Camera and Cloud-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56DF5864B981CD8815C0D38C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Camera and Cloud/Pods-Camera and Cloud-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		806A646897342F76B1F1A6BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8FEA9E01D9AF3E1003A1371 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8FEA9F21D9AF3E1003A1371 /* SecondViewController.m in Sources */,
+				D8FEA9EC1D9AF3E1003A1371 /* AppDelegate.m in Sources */,
+				D8FEA9EF1D9AF3E1003A1371 /* FirstViewController.m in Sources */,
+				D8FEA9E91D9AF3E1003A1371 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D8FEA9F31D9AF3E1003A1371 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8FEA9F41D9AF3E1003A1371 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D8FEA9F81D9AF3E1003A1371 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8FEA9F91D9AF3E1003A1371 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D8FEA9FC1D9AF3E1003A1371 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D8FEA9FD1D9AF3E1003A1371 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D8FEA9FF1D9AF3E1003A1371 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 095BA2F7224F04C100944742 /* Pods-Camera and Cloud.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Camera and Cloud/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "turntotech.io.Camera-and-Cloud";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D8FEAA001D9AF3E1003A1371 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34CCF0557BDD67F489C9A5B0 /* Pods-Camera and Cloud.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Camera and Cloud/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "turntotech.io.Camera-and-Cloud";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D8FEA9DF1D9AF3E1003A1371 /* Build configuration list for PBXProject "Camera and Cloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8FEA9FC1D9AF3E1003A1371 /* Debug */,
+				D8FEA9FD1D9AF3E1003A1371 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8FEA9FE1D9AF3E1003A1371 /* Build configuration list for PBXNativeTarget "Camera and Cloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8FEA9FF1D9AF3E1003A1371 /* Debug */,
+				D8FEAA001D9AF3E1003A1371 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D8FEA9DC1D9AF3E1003A1371 /* Project object */;
+}
