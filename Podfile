@@ -7,5 +7,7 @@ target 'Camera and Cloud' do
   # Pods for Camera and Cloud
 pod 'Firebase'
 pod 'Firebase/Storage'
+pod 'AFNetworking', '~> 3.0'
+
 
 end

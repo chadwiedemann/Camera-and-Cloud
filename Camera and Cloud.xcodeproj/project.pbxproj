@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		635B32405D4827038C3C726D /* libPods-Camera and Cloud.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 778AFA333047D5454F56EFC7 /* libPods-Camera and Cloud.a */; };
+		D896EACD1D9D5CC9001689D9 /* DAO.m in Sources */ = {isa = PBXBuildFile; fileRef = D896EACC1D9D5CC9001689D9 /* DAO.m */; };
+		D896EAD11D9D7207001689D9 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = D896EAD01D9D7207001689D9 /* Photo.m */; };
+		D896EAD71D9D724B001689D9 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = D896EAD61D9D724B001689D9 /* Comment.m */; };
 		D8FEA9E91D9AF3E1003A1371 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FEA9E81D9AF3E1003A1371 /* main.m */; };
 		D8FEA9EC1D9AF3E1003A1371 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FEA9EB1D9AF3E1003A1371 /* AppDelegate.m */; };
 		D8FEA9EF1D9AF3E1003A1371 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FEA9EE1D9AF3E1003A1371 /* FirstViewController.m */; };
@@ -60,6 +63,12 @@
 		095BA2F7224F04C100944742 /* Pods-Camera and Cloud.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camera and Cloud.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Camera and Cloud/Pods-Camera and Cloud.debug.xcconfig"; sourceTree = "<group>"; };
 		34CCF0557BDD67F489C9A5B0 /* Pods-Camera and Cloud.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camera and Cloud.release.xcconfig"; path = "Pods/Target Support Files/Pods-Camera and Cloud/Pods-Camera and Cloud.release.xcconfig"; sourceTree = "<group>"; };
 		778AFA333047D5454F56EFC7 /* libPods-Camera and Cloud.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Camera and Cloud.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D896EACB1D9D5CC9001689D9 /* DAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAO.h; sourceTree = "<group>"; };
+		D896EACC1D9D5CC9001689D9 /* DAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAO.m; sourceTree = "<group>"; };
+		D896EACF1D9D7207001689D9 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		D896EAD01D9D7207001689D9 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		D896EAD51D9D724B001689D9 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		D896EAD61D9D724B001689D9 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		D8FEA9E41D9AF3E1003A1371 /* Camera and Cloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Camera and Cloud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8FEA9E81D9AF3E1003A1371 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D8FEA9EA1D9AF3E1003A1371 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -142,6 +151,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D896EACE1D9D5CDF001689D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D896EACB1D9D5CC9001689D9 /* DAO.h */,
+				D896EACC1D9D5CC9001689D9 /* DAO.m */,
+				D896EACF1D9D7207001689D9 /* Photo.h */,
+				D896EAD01D9D7207001689D9 /* Photo.m */,
+				D896EAD51D9D724B001689D9 /* Comment.h */,
+				D896EAD61D9D724B001689D9 /* Comment.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		D8FEA9DB1D9AF3E1003A1371 = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +187,7 @@
 			children = (
 				D8FEA9EA1D9AF3E1003A1371 /* AppDelegate.h */,
 				D8FEA9EB1D9AF3E1003A1371 /* AppDelegate.m */,
+				D896EACE1D9D5CDF001689D9 /* Model */,
 				D8FEA9ED1D9AF3E1003A1371 /* FirstViewController.h */,
 				D8FEA9EE1D9AF3E1003A1371 /* FirstViewController.m */,
 				D8FEA9F01D9AF3E1003A1371 /* SecondViewController.h */,
@@ -386,6 +409,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D896EAD71D9D724B001689D9 /* Comment.m in Sources */,
+				D896EAD11D9D7207001689D9 /* Photo.m in Sources */,
+				D896EACD1D9D5CC9001689D9 /* DAO.m in Sources */,
 				D8FEA9F21D9AF3E1003A1371 /* SecondViewController.m in Sources */,
 				D8FEA9EC1D9AF3E1003A1371 /* AppDelegate.m in Sources */,
 				D8FEA9EF1D9AF3E1003A1371 /* FirstViewController.m in Sources */,
