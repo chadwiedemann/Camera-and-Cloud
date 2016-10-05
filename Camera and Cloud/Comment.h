@@ -10,4 +10,10 @@
 
 @interface Comment : NSObject
 
+@property NSInteger photoID;
+@property NSInteger commentID;
+@property NSString *commentText;
+@property NSString *commentAuthor;
+
+
 @end

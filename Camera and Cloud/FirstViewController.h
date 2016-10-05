@@ -11,7 +11,8 @@
 #import <AFNetworking.h>
 
 @interface FirstViewController : UIViewController
-
-
+@property (weak, nonatomic) IBOutlet UIImageView *testDownloadImageView;
+@property (nonatomic, strong) NSMutableDictionary *firebaseGETData;
+@property (nonatomic, strong) NSMutableArray *JSONArray;
 @end
 

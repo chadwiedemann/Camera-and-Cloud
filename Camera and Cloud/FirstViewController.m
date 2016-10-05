@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#import "DAO.h"
 
 @interface FirstViewController ()
 
@@ -16,8 +17,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
-    [self sendHTTPPost];
+    DAO *dataAccessObject = [DAO sharedInstanceOfDAO];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(downloadImageFromFirebaseStorage)
+                                                name:@"startDownloadingImage"
+                                               object:nil];
+    self.firebaseGETData = [[NSMutableDictionary alloc]init];
+
     
 }
 
@@ -29,69 +35,135 @@
 #pragma methods to create JSON data
 -(NSArray*)createArrayToConvertToJSON
 {
-    NSDictionary *photo1 = @{@"PhotoID":@1,@"TimeStamp":@1,@"FileReference":@"testForAF",@"FileType":@"jpg",@"Comments":@[@"great Pic"],@"Likes":@[@"user1like"]};
-    NSArray *metaData = @[photo1];
+    NSDictionary *photo1 = @{@"PhotoID":@1,@"TimeStamp":@1,@"FileReference":@"PUTTEST",@"FileType":@"PUTTEST3",@"Comments":@[@"great Pic"],@"Likes":@4};
+    NSDictionary *photo2 = @{@"PhotoID":@1,@"TimeStamp":@1,@"FileReference":@"PUTTEST",@"FileType":@"PUTTEST3",@"Comments":@[@"great Pic"],@"Likes":@4};
+    NSArray *metaData = @[photo1,photo2];
     return metaData;
     
 }
 
 -(void)sendHTTPPost
 {
-
+    
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[self createArrayToConvertToJSON] options:NSJSONWritingPrettyPrinted error:&error];
-    
-    //normal request
-//    NSURL *url = [NSURL URLWithString:@"https://camera-and-cloud-22204.firebaseio.com/images.json"];
-//    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:url];
-//    request.HTTPMethod = @"POST";
-//    request.HTTPBody = jsonData;
-//    request.URL = url;
-//    NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-//        NSLog(@"success");
-//        NSLog(@"%@",error.localizedDescription);
-//    }];
-//    [dataTask resume];
-    
-    
-    
-    //request from AFNetworking
+    //AF Datatask
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     NSURL *URL = [NSURL URLWithString:@"https://camera-and-cloud-22204.firebaseio.com/images.json"];
-    NSMutableURLRequest *request2 = [[NSMutableURLRequest alloc]initWithURL:URL];
-    request2.HTTPBody = jsonData;
-    request2.HTTPMethod = @"POST";
-    request2.URL = URL;
-    NSURLSessionUploadTask *uploadTask = [manager uploadTaskWithRequest:request2 fromFile:URL progress:nil completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+    NSMutableURLRequest *request3 = [[NSMutableURLRequest alloc]initWithURL:URL];
+    request3.HTTPMethod = @"POST";
+    request3.HTTPBody = jsonData;
+    request3.URL = URL;
+    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request3 completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
         if (error) {
             NSLog(@"Error: %@", error);
-            NSLog(@"%@",error.localizedDescription);
         } else {
-            NSLog(@"Success: %@ %@", response, responseObject);
+            NSLog(@"%@ %@", response, responseObject);
         }
     }];
-    [uploadTask resume];
+    [dataTask resume];
 }
 
--(void)sendLocalFileToFireBase
+-(void)GETDataFromAPI
 {
-   
-        FIRStorage *storage = [FIRStorage storage];
-        FIRStorageReference *storageRef = [storage referenceForURL:@"gs://camera-and-cloud-22204.appspot.com"];
-        UIImage *image = [UIImage imageNamed:@"photo_02@3x.jpg"];
-        NSData *data = UIImageJPEGRepresentation(image, .9);
-        FIRStorageReference *imagesDirectory = [storageRef child:@"images/photo_02@3x.jpg"];
-        FIRStorageUploadTask *uploadTask = [imagesDirectory putData:data metadata:nil completion:^(FIRStorageMetadata *metadata, NSError *error) {
-            if (error != nil) {
-                NSLog(@"%@",error.localizedDescription);
-            } else {
-                NSURL *downloadURL = metadata.downloadURL;
-                NSLog(@"%@",downloadURL);
-                NSLog(@"SUSSESS");
-            }
-        }];
-
+    
+    //AF Datatask
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    NSURL *URL = [NSURL URLWithString:@"https://camera-and-cloud-22204.firebaseio.com/images.json"];
+    NSMutableURLRequest *request3 = [[NSMutableURLRequest alloc]initWithURL:URL];
+    request3.HTTPMethod = @"GET";
+    request3.URL = URL;
+    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request3 completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+        } else {
+            NSLog(@"%@ %@", response, responseObject);
+            self.firebaseGETData = [[NSMutableDictionary alloc]init];
+            self.firebaseGETData = responseObject;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [[NSNotificationCenter defaultCenter]
+                 postNotificationName:@"startDownloadingImage"
+                 object:nil];
+            });
+        }
+        
+    }];
+    [dataTask resume];
+    
 }
+
+-(void)sendLocalPictureToFirebase
+{
+    
+    FIRStorage *storage = [FIRStorage storage];
+    FIRStorageReference *storageRef = [storage referenceForURL:@"gs://camera-and-cloud-22204.appspot.com"];
+    UIImage *image = [UIImage imageNamed:@"photo_02@3x.jpg"];
+    NSData *data = UIImageJPEGRepresentation(image, .9);
+    FIRStorageReference *imagesDirectory = [storageRef child:@"images/photo_02@3x.jpg"];
+    FIRStorageUploadTask *uploadTask = [imagesDirectory putData:data metadata:nil completion:^(FIRStorageMetadata *metadata, NSError *error) {
+        if (error != nil) {
+            NSLog(@"%@",error.localizedDescription);
+        } else {
+            NSURL *downloadURL = metadata.downloadURL;
+            NSLog(@"%@",downloadURL);
+            NSLog(@"SUSSESS");
+        }
+    }];
+    
+}
+
+-(NSString*)getPictureReferenceFromAPIData: (NSMutableDictionary*) data
+{
+    NSArray *pictureArray = (NSArray*)[data objectForKey:@"-KSrxIeOtamAxNavYPlg"];
+    NSDictionary *picInfo = (NSDictionary*)[pictureArray objectAtIndex:0];
+    NSString *photoreference = (NSString*)[picInfo objectForKey:@"FileReference"];
+    return photoreference;
+}
+
+-(void)downloadImageFromFirebaseStorage
+{
+    
+    FIRStorage *storage = [FIRStorage storage];
+    FIRStorageReference *storageRef = [storage referenceForURL:@"gs://camera-and-cloud-22204.appspot.com"];
+    FIRStorageReference *imageRef = [storageRef child:[self getPictureReferenceFromAPIData:self.firebaseGETData]];
+    // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
+    [imageRef dataWithMaxSize:1 * 1024 * 1024 completion:^(NSData *data, NSError *error){
+        if (error != nil) {
+            // Uh-oh, an error occurred!
+        } else {
+            self.testDownloadImageView.image = [UIImage imageWithData:data];
+        }
+    }];
+    
+    
+}
+
+-(void)addACommentToAPhotoPUT
+{
+    
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[self createArrayToConvertToJSON] options:NSJSONWritingPrettyPrinted error:&error];
+    //AF Datatask
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    NSURL *URL = [NSURL URLWithString:@"https://camera-and-cloud-22204.firebaseio.com/images/-KSrxIeOtamAxNavYPlg.json"];
+    NSMutableURLRequest *request3 = [[NSMutableURLRequest alloc]initWithURL:URL];
+    request3.HTTPMethod = @"PUT";
+    request3.HTTPBody = jsonData;
+    request3.URL = URL;
+    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request3 completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+        } else {
+            NSLog(@"%@ %@", response, responseObject);
+        }
+    }];
+    [dataTask resume];
+    
+}
+
+
 
 @end

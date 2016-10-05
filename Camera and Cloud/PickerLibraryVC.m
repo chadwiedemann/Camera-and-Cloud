@@ -1,48 +1,28 @@
 //
-//  SecondViewController.m
+//  PickerLibraryVC.m
 //  Camera and Cloud
 //
-//  Created by Chad Wiedemann on 9/27/16.
+//  Created by Chad Wiedemann on 10/4/16.
 //  Copyright © 2016 Chad Wiedemann. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "PickerLibraryVC.h"
 
-@interface SecondViewController ()
+@interface PickerLibraryVC ()
 
 @end
 
-@implementation SecondViewController
+@implementation PickerLibraryVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
-    UITapGestureRecognizer *moveToPics = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapMethod:)];
-    [self.goToCollectionViewView addGestureRecognizer:moveToPics];
     
-    UITapGestureRecognizer *moveToCamera = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(showCamera:)];
-    [self.GoToCameraView addGestureRecognizer:moveToCamera];
     self.picker = [[UIImagePickerController alloc]init];
     self.picker.delegate = self;
-    if(![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
-//        [self moveToPhotoAlbum];
-    }
-    
-    
-   
-    
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
--(void) showCamera: (UITapGestureRecognizer*) sender
-{
     self.picker.allowsEditing = NO;
-    self.picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    self.picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     [self presentViewController:self.picker animated:YES completion:nil];
+    
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
@@ -55,6 +35,11 @@
         [self uploadPhoto];
         [self sendHTTPPost];
     }];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 -(void)uploadPhoto
@@ -107,20 +92,5 @@
     [dataTask resume];
 }
 
--(void) moveToPhotoAlbum
-{
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    self.pickerLibraryVC = (PickerLibraryVC*)[sb instantiateViewControllerWithIdentifier:@"PhotoLibrary1"];
-    [self.navigationController pushViewController:self.pickerLibraryVC animated:YES];
-}
-
--(void) tapMethod: (UITapGestureRecognizer*) sender
-{
-    
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    self.pickerLibraryVC = (PickerLibraryVC*)[sb instantiateViewControllerWithIdentifier:@"PhotoLibrary1"];
-    [self.navigationController pushViewController:self.pickerLibraryVC animated:YES];
-    
-}
 
 @end

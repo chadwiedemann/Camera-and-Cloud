@@ -7,9 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Firebase.h>
+#import <AFNetworking.h>
 
 @interface DAO : NSObject
 
 + (DAO*)sharedInstanceOfDAO;
+@property (nonatomic, strong) NSMutableDictionary *firebaseGETData;
+@property (nonatomic, strong) NSMutableArray *JSONArray;
 
 @end

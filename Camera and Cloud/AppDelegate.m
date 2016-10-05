@@ -20,6 +20,15 @@
     
     [FIRApp configure];
     
+//    UIStoryboard *storyboard = [[UIStoryboard alloc] init];
+//    storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    
+//    UIViewController *tabBarControllerView = [storyboard instantiateViewControllerWithIdentifier:@"tabBarController"];
+//    [self.window setRootViewController:tabBarControllerView];
+//    self.tabBarController = (UITabBarController *)self.window.rootViewController;
+//    self.tabBarController.delegate = (id)self;
+//    self.tabBarController.selectedIndex = 2;
+    
     
     return YES;
 }

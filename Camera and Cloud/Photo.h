@@ -10,4 +10,10 @@
 
 @interface Photo : NSObject
 
+@property NSInteger *photoID;
+@property NSMutableArray *commentsArray;
+@property NSInteger *numberOfLikes;
+@property NSInteger *timeStamp;
+@property NSString *fileReference;
+
 @end
