@@ -80,7 +80,6 @@
         
     }];
     [dataTask resume];
-    
 }
 
 -(void)sendLocalPictureToFirebase

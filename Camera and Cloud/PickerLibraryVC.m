@@ -25,6 +25,7 @@
     
 }
 
+
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
 {
     self.pictureTaken = [info objectForKey:@"UIImagePickerControllerOriginalImage"];

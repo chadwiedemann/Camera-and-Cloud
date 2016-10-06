@@ -24,13 +24,18 @@
     [self.GoToCameraView addGestureRecognizer:moveToCamera];
     self.picker = [[UIImagePickerController alloc]init];
     self.picker.delegate = self;
-    if(![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
-//        [self moveToPhotoAlbum];
-    }
+    
     
     
    
     
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    if(![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+        [self moveToPhotoAlbum];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

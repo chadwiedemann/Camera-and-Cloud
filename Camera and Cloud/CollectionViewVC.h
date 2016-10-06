@@ -9,10 +9,16 @@
 #import <UIKit/UIKit.h>
 #import <Firebase.h>
 #import <AFNetworking.h>
+#import "PhotoDetailVC.h"
 
 @interface CollectionViewVC : UICollectionViewController
+
 @property (nonatomic, strong) NSMutableDictionary *firebaseGETData;
 @property (nonatomic, strong) NSMutableArray *fileReferences;
 @property (nonatomic, strong) NSMutableArray *imagesArray;
 @property NSInteger downloadCounter;
+@property (nonatomic, strong) UIImage *selectedPhoto;
+@property (nonatomic, strong) PhotoDetailVC *photoDetailVC;
+@property (nonatomic, strong) NSMutableArray *currentComments;
+
 @end

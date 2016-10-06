@@ -15,6 +15,7 @@
 		D896EAD71D9D724B001689D9 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = D896EAD61D9D724B001689D9 /* Comment.m */; };
 		D8A5CC0B1D9EE72F004D50D2 /* CollectionViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A5CC0A1D9EE72F004D50D2 /* CollectionViewVC.m */; };
 		D8A5CC0E1D9EF964004D50D2 /* PhotoDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A5CC0D1D9EF964004D50D2 /* PhotoDetailVC.m */; };
+		D8B22E701DA6AB67009A090C /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B22E6F1DA6AB67009A090C /* CommentTableViewCell.m */; };
 		D8C5CD4C1DA447FA000A4FC6 /* PickerLibraryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C5CD4B1DA447FA000A4FC6 /* PickerLibraryVC.m */; };
 		D8FEA9E91D9AF3E1003A1371 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FEA9E81D9AF3E1003A1371 /* main.m */; };
 		D8FEA9EC1D9AF3E1003A1371 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FEA9EB1D9AF3E1003A1371 /* AppDelegate.m */; };
@@ -77,6 +78,8 @@
 		D8A5CC0A1D9EE72F004D50D2 /* CollectionViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewVC.m; sourceTree = "<group>"; };
 		D8A5CC0C1D9EF964004D50D2 /* PhotoDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailVC.h; sourceTree = "<group>"; };
 		D8A5CC0D1D9EF964004D50D2 /* PhotoDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailVC.m; sourceTree = "<group>"; };
+		D8B22E6E1DA6AB67009A090C /* CommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentTableViewCell.h; sourceTree = "<group>"; };
+		D8B22E6F1DA6AB67009A090C /* CommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewCell.m; sourceTree = "<group>"; };
 		D8C5CD4A1DA447FA000A4FC6 /* PickerLibraryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerLibraryVC.h; sourceTree = "<group>"; };
 		D8C5CD4B1DA447FA000A4FC6 /* PickerLibraryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerLibraryVC.m; sourceTree = "<group>"; };
 		D8FEA9E41D9AF3E1003A1371 /* Camera and Cloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Camera and Cloud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,12 +202,14 @@
 				D8FEA9F11D9AF3E1003A1371 /* SecondViewController.m */,
 				D8C5CD4A1DA447FA000A4FC6 /* PickerLibraryVC.h */,
 				D8C5CD4B1DA447FA000A4FC6 /* PickerLibraryVC.m */,
-				D85A8E961DA0081C0012B0AE /* PhotoLibraryVC.h */,
-				D85A8E971DA0081C0012B0AE /* PhotoLibraryVC.m */,
 				D8A5CC091D9EE72F004D50D2 /* CollectionViewVC.h */,
 				D8A5CC0A1D9EE72F004D50D2 /* CollectionViewVC.m */,
+				D8B22E6E1DA6AB67009A090C /* CommentTableViewCell.h */,
+				D8B22E6F1DA6AB67009A090C /* CommentTableViewCell.m */,
 				D8FEA9F31D9AF3E1003A1371 /* Main.storyboard */,
 				D8FEA9F61D9AF3E1003A1371 /* Assets.xcassets */,
+				D85A8E961DA0081C0012B0AE /* PhotoLibraryVC.h */,
+				D85A8E971DA0081C0012B0AE /* PhotoLibraryVC.m */,
 				D8FEA9F81D9AF3E1003A1371 /* LaunchScreen.storyboard */,
 				D8FEA9FB1D9AF3E1003A1371 /* Info.plist */,
 				D8FEAA011D9AF636003A1371 /* GoogleService-Info.plist */,
@@ -422,6 +427,7 @@
 				D896EAD71D9D724B001689D9 /* Comment.m in Sources */,
 				D8A5CC0B1D9EE72F004D50D2 /* CollectionViewVC.m in Sources */,
 				D896EAD11D9D7207001689D9 /* Photo.m in Sources */,
+				D8B22E701DA6AB67009A090C /* CommentTableViewCell.m in Sources */,
 				D896EACD1D9D5CC9001689D9 /* DAO.m in Sources */,
 				D8FEA9F21D9AF3E1003A1371 /* SecondViewController.m in Sources */,
 				D8FEA9EC1D9AF3E1003A1371 /* AppDelegate.m in Sources */,

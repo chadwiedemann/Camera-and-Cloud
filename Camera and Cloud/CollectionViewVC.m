@@ -18,9 +18,9 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.downloadCounter = 0;
     self.fileReferences = [[NSMutableArray alloc]init];
     self.imagesArray = [[NSMutableArray alloc]init];
+    self.photoDetailVC.currentComments = [[NSMutableArray alloc]init];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(getPictureReferenceFromAPIData)
                                                  name:@"startDownloadingImage"
@@ -29,8 +29,12 @@ static NSString * const reuseIdentifier = @"Cell";
                                              selector:@selector(reload)
                                                  name:@"loadView"
                                                object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(downLoadNextPhoto)
+                                                 name:@"getNextPicture"
+                                               object:nil];
     
-    [self GETDataFromAPI];
+    
     
     
     
@@ -43,8 +47,20 @@ static NSString * const reuseIdentifier = @"Cell";
 
 }
 
+
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    self.downloadCounter = 0;
+    [self.photoDetailVC.currentComments removeAllObjects];
+    [self.fileReferences removeAllObjects];
+    [self.imagesArray removeAllObjects];
+    [self GETDataFromAPI];
+}
+
 -(void)reload
 {
+    
     [self.collectionView reloadData];
 }
 
@@ -54,15 +70,6 @@ static NSString * const reuseIdentifier = @"Cell";
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -124,13 +131,16 @@ static NSString * const reuseIdentifier = @"Cell";
     FIRStorageReference *storageRef = [storage referenceForURL:@"gs://camera-and-cloud-22204.appspot.com/images"];
     FIRStorageReference *imageRef = [storageRef child:reference];
     // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
-    [imageRef dataWithMaxSize:1 * 1024 * 1024 completion:^(NSData *data, NSError *error){
+    [imageRef dataWithMaxSize:1 * 10240 * 1024 completion:^(NSData *data, NSError *error){
         if (error != nil) {
             NSLog(@"%@",error.localizedDescription);
         } else {
             UIImage *image = [UIImage imageWithData:data];
             [self.imagesArray addObject:image];
             self.downloadCounter = self.downloadCounter + 1;
+            
+            
+            
             if(self.downloadCounter == self.fileReferences.count)
             {
                 dispatch_async(dispatch_get_main_queue(), ^{
@@ -138,11 +148,23 @@ static NSString * const reuseIdentifier = @"Cell";
                      postNotificationName:@"loadView"
                      object:nil];
                 });
+            }else{
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [[NSNotificationCenter defaultCenter]
+                     postNotificationName:@"getNextPicture"
+                     object:nil];
+                });
             }
         }
     }];
     
     
+}
+
+-(void)downLoadNextPhoto
+{
+    NSString *next = [self.fileReferences objectAtIndex:self.downloadCounter];
+    [self downloadImageFromFirebaseStorage:next];
 }
 
 -(void)getPictureReferenceFromAPIData
@@ -154,13 +176,10 @@ static NSString * const reuseIdentifier = @"Cell";
         NSDictionary *tempDic = [self.firebaseGETData objectForKey:fileReference[i]];
         NSString *reference = [tempDic objectForKey:@"FileReference"];
         [self.fileReferences addObject:reference];
-        [self downloadImageFromFirebaseStorage:reference];
     }
     
-//    NSArray *pictureArray = (NSArray*)[data objectForKey:@"-KSrxIeOtamAxNavYPlg"];
-//    NSDictionary *picInfo = (NSDictionary*)[pictureArray objectAtIndex:0];
-//    NSString *photoreference = (NSString*)[picInfo objectForKey:@"FileReference"];
-//    return photoreference;
+    
+    [self downLoadNextPhoto];
 }
 
 #pragma mark <UICollectionViewDelegate>
@@ -172,12 +191,27 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 */
 
-/*
+
 // Uncomment this method to specify if the specified item should be selected
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    self.selectedPhoto  = [self.imagesArray objectAtIndex:indexPath.row];
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    self.photoDetailVC = (PhotoDetailVC*)[sb instantiateViewControllerWithIdentifier:@"PhotoDetailVC"];
+    self.photoDetailVC.selectedPhoto = self.selectedPhoto;
+    self.photoDetailVC.fileReference = [self.fileReferences objectAtIndex:indexPath.row];
+    NSArray *fileReference = [self.firebaseGETData allKeys];
+    NSDictionary *tempDic = [self.firebaseGETData objectForKey: fileReference[indexPath.row]];
+    NSArray *reference = [tempDic objectForKey:@"Comments"];
+    NSMutableArray *reference1 = [reference mutableCopy];
+    self.currentComments=reference1;
+    self.photoDetailVC.firebaseGETData = self.firebaseGETData;
+    self.photoDetailVC.currentComments = self.currentComments;
+    [self.navigationController pushViewController:self.photoDetailVC animated:YES];
     return YES;
 }
-*/
+
 
 /*
 // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
